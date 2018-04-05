@@ -1,0 +1,6 @@
+print((1,2,3))
+print(())
+print(3*(40+2))
+print(3*(40+2,))
+print(tuple([1,2,3]))
+print(tuple('abc'))
