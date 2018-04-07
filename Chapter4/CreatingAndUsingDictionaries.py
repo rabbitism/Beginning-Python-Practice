@@ -42,3 +42,17 @@ if request == 'a': key = 'addr'
 
 # Only try to print information if the name is a valid key in our dictionary
 if name in people: print("{}'s {} is {}.".format(name, labels[key], people[name][key]))
+
+#string formatting with dictionaries
+phonebook = {'Beth': '9102', 'Alice':'2341', 'Cecil':'3258'}
+print("Cecil's phone number is {Cecil}".format_map(phonebook))
+
+template = '''<html>
+<head><title>{title}</title></head>
+<body>
+<h1>{title2}</h1>
+<p>{text}</p>
+</body>'''
+
+data = {'title': 'My Home Page', 'text': 'Welcome to my home page!', 'title2':'This is title 2'}
+print(template.format_map(data))
