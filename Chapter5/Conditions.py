@@ -61,6 +61,42 @@ else:
 
 #Assertions
 age = 10
-assert 0<age<100
+#assert 0<age<100
 age = -1
-assert 0<age<100, 'The age must be realistic'
+#assert 0<age<100, 'The age must be realistic'
+
+
+
+#following parts will be moved to loop file
+
+#Parallel iteration
+names = ['anne', 'beth', 'george', 'damon']
+ages = [12,45,32,102]
+print(zip(names, ages)) #print the location of this zip in memory
+print(list(zip(names, ages)))
+for name,age in zip(names, ages):
+    print(name, 'is', age, 'years old')
+
+#zip will stop when the shortest sequence is used up
+print(list(zip(range(5),range(1999))))
+
+#numbered iteration
+strings = ['a', 'b', 'c', 'd']
+index = 0
+for string in strings:
+    if 'a' in string:
+        strings[index] = '[censored]'
+    index+=1
+
+print(strings)
+
+#use built-in enumerate function
+for index, string in enumerate(strings):
+    if 'c' in string:
+        strings[index] = '[censored]'
+
+print(strings)
+
+#revsered and sorted iteration
+print(sorted('Hello, world!'))
+print(''.join(reversed('Hello, world!')))
